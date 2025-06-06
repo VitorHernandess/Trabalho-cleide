@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Assistente de Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="user-info">
+                <img src="default-avatar.png" alt="Avatar" class="avatar" id="userAvatar">
+                <span class="username" id="usernameDisplay">Olá, Usuário</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#chat">Assistente IA</a></li>
+                <li><a href="#music">Músicas</a></li>
+                <li><a href="#contacts">Contatos</a></li>
+                <li><a href="#settings">Configurações</a></li>
+                <li><a href="#" id="logout">Sair</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section id="chat-section" class="active-section">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot">
+                            Olá! Eu sou seu assistente de bem-estar. Como posso ajudar você hoje?
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                        <button id="send-message">Enviar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="music-section" class="hidden-section">
+                <div class="music-container">
+                    <h2>Músicas Relaxantes</h2>
+                    <div class="playlist-container">
+                        <div class="playlist-controls">
+                            <button id="create-playlist">Nova Playlist</button>
+                            <button id="ai-suggest">Sugestões da IA</button>
+                        </div>
+                        <div class="playlists">
+                            <div class="playlist-card">
+                                <h3>Meditação</h3>
+                                <ul class="song-list">
+                                    <li>Sons da Natureza</li>
+                                    <li>Música Calma</li>
+                                    <li>Ondas do Mar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacts-section" class="hidden-section">
+                <div class="contacts-container">
+                    <h2>Contatos Importantes</h2>
+                    <div class="add-contact">
+                        <button id="add-contact-btn">Adicionar Contato</button>
+                    </div>
+                    <div class="contacts-list">
+                        <!-- Contacts will be added here dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="settings-section" class="hidden-section">
+                <div class="settings-container">
+                    <h2>Configurações do Perfil</h2>
+                    <div class="profile-settings">
+                        <div class="avatar-settings">
+                            <img src="default-avatar.png" alt="Avatar" class="current-avatar" id="previewAvatar">
+                            <div class="avatar-controls">
+                                <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                                <button class="btn" onclick="document.getElementById('avatarInput').click()">
+                                    Alterar Foto
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="user-settings">
+                            <div class="setting-group">
+                                <label for="newUsername">Nome de Usuário</label>
+                                <input type="text" id="newUsername" class="setting-input" placeholder="Novo nome de usuário">
+                                <button class="btn" onclick="updateUsername()">Atualizar Nome</button>
+                            </div>
+
+                            <div class="setting-group">
+                                <label for="currentPassword">Senha Atual</label>
+                                <input type="password" id="currentPassword" class="setting-input" placeholder="Senha atual">
+                                
+                                <label for="newPassword">Nova Senha</label>
+                                <input type="password" id="newPassword" class="setting-input" placeholder="Nova senha">
+                                
+                                <label for="confirmPassword">Confirmar Nova Senha</label>
+                                <input type="password" id="confirmPassword" class="setting-input" placeholder="Confirmar nova senha">
+                                
+                                <button class="btn" onclick="updatePassword()">Alterar Senha</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html> 

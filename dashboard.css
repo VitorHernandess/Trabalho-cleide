@@ -1,0 +1,288 @@
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #f5f6fa;
+}
+
+.sidebar {
+    width: 250px;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: 600;
+    color: #444;
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.nav-links li {
+    margin-bottom: 15px;
+}
+
+.nav-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-links li.active a,
+.nav-links a:hover {
+    background: #7367f0;
+    color: #fff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* Settings Section */
+.settings-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.avatar-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.current-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7367f0;
+}
+
+.avatar-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.user-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.setting-group label {
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.setting-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.setting-input:focus {
+    outline: none;
+    border-color: #7367f0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #7367f0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #6354e4;
+}
+
+/* Chat Section */
+.chat-container {
+    background: #fff;
+    border-radius: 15px;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.message.bot {
+    background: #7367f0;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.message.user {
+    background: #e9ecef;
+    color: #444;
+    align-self: flex-end;
+}
+
+.chat-input {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.chat-input button{
+    border: none;
+    color: white;
+    width: 6vw;
+    background-color: #7367f0;
+    border-radius: 10px;
+}
+
+/* Music Section */
+.music-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.playlist-controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.playlist-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.song-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.song-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.song-list li:hover {
+    background: #f0f0f0;
+}
+
+/* Contacts Section */
+.contacts-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.add-contact {
+    margin-bottom: 20px;
+}
+
+.contacts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.contact-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info h4 {
+    margin: 0;
+    color: #444;
+}
+
+.contact-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Utility Classes */
+.hidden-section {
+    display: none;
+}
+
+.active-section {
+    display: block;
+} 

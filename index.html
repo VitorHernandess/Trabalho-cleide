@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <!-- Login Form -->
+            <div class="login-form" id="loginForm">
+                <h2>Login</h2>
+                <div class="input-field">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="loginPassword" placeholder="Senha" required>
+                </div>
+                <button type="button" class="btn" onclick="handleLogin()">Entrar</button>
+                <p class="switch-text">Novo por aqui?</p>
+                <button type="button" class="btn transparent" onclick="toggleForms()">Registrar</button>
+            </div>
+
+            <!-- Register Form -->
+            <div class="register-form" id="registerForm" style="display: none;">
+                <h2>Registro</h2>
+                <div class="input-field">
+                    <input type="text" id="registerName" placeholder="Nome" required>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="registerPassword" placeholder="Senha" required>
+                </div>
+                <button type="button" class="btn" onclick="handleRegister()">Registrar</button>
+                <p class="switch-text">Já tem uma conta?</p>
+                <button type="button" class="btn transparent" onclick="toggleForms()">Fazer Login</button>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Verificar se o usuário já está logado
+        if (localStorage.getItem('currentUser')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
